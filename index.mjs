@@ -202,7 +202,7 @@ const server = http.createServer(async (req, res) => {
     // TODO: Fix the current edgewallet v2.12.0 so that this request is sent.
     if (
       method === 'POST' &&
-      acceptHeader === 'application/payment'
+      contentTypeHeader === 'application/payment'
     ) {
       return handleV2Payment(req, res)
     }
